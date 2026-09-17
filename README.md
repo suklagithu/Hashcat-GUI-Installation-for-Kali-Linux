@@ -1,6 +1,7 @@
 # Hashcat GUI Installation for Kali Linux
 
 Installation guide for running **Hashcat GUI** on Kali Linux.
+
 <p align="center">
   <img src="Hashcat GUI Windows Icon.png" width="180">
 </p>
@@ -47,7 +48,23 @@ hcxpcapngtool --version
 sudo apt install python3-pyqt5
 ```
 
-### 4. Download the Hashcat GUI
+### 4. Verify Hashcat
+
+Check whether Hashcat can detect an available compute device:
+
+```bash
+hashcat -I
+```
+
+To test Hashcat performance:
+
+```bash
+hashcat -b
+```
+
+If your CPU is detected successfully, Hashcat can run using the CPU.
+
+### 5. Download the Hashcat GUI
 
 Clone the GUI repository:
 
@@ -61,15 +78,13 @@ Enter the directory:
 cd Hashcat-GUI-for-Windows
 ```
 
-### 5. Run the GUI
+### 6. Run the GUI
 
 ```bash
 python3 hashcat_gui.py
 ```
 
 The Hashcat GUI should now open.
-
-
 
 ## Supported Hash Modes
 
