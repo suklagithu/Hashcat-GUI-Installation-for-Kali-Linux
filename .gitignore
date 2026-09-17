@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Hashcat files
+*.hash
+*.hc22000
+*.cap
+*.pcap
+*.pcapng
+
+# Wordlists
+rockyou.txt
+*.txt
+
+# Generated output
+case*/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
