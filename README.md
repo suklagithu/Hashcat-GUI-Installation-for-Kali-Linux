@@ -8,11 +8,11 @@ Installation guide for running **Hashcat GUI** on Kali Linux.
 
 ## Requirements
 
-- Kali Linux
-- Hashcat
-- PyQt5
-- hcxtools
-- Working CPU/GPU drivers
+* Kali Linux
+* Hashcat
+* PyQt5
+* hcxtools
+* PoCL (CPU OpenCL runtime)
 
 ## Installation
 
@@ -28,7 +28,21 @@ Verify:
 hashcat --version
 ```
 
-### 2. Install hcxtools
+### 2. Install PoCL
+
+PoCL provides OpenCL support for running Hashcat on the CPU.
+
+```bash
+sudo apt install pocl-opencl-icd
+```
+
+Verify Hashcat can detect the CPU:
+
+```bash
+hashcat -I
+```
+
+### 3. Install hcxtools
 
 `hcxtools` is required for converting supported Wi-Fi capture files to Hashcat's `.hc22000` format.
 
@@ -42,27 +56,11 @@ Verify:
 hcxpcapngtool --version
 ```
 
-### 3. Install PyQt5
+### 4. Install PyQt5
 
 ```bash
 sudo apt install python3-pyqt5
 ```
-
-### 4. Verify Hashcat
-
-Check whether Hashcat can detect an available compute device:
-
-```bash
-hashcat -I
-```
-
-To test Hashcat performance:
-
-```bash
-hashcat -b
-```
-
-If your CPU is detected successfully, Hashcat can run using the CPU.
 
 ### 5. Download the Hashcat GUI
 
@@ -86,16 +84,30 @@ python3 hashcat_gui.py
 
 The Hashcat GUI should now open.
 
+## GPU Verification
+
+To check available Hashcat devices:
+
+```bash
+hashcat -I
+```
+
+To run a benchmark:
+
+```bash
+hashcat -b
+```
+
 ## Supported Hash Modes
 
 | Hash Type | Hashcat Mode |
-|---|---:|
-| WPA/WPA2 | 22000 |
-| MD5 | 0 |
-| SHA1 | 100 |
-| SHA256 | 1400 |
-| NTLM | 1000 |
-| bcrypt | 3200 |
+| --------- | -----------: |
+| WPA/WPA2  |        22000 |
+| MD5       |            0 |
+| SHA1      |          100 |
+| SHA256    |         1400 |
+| NTLM      |         1000 |
+| bcrypt    |         3200 |
 
 ## Disclaimer
 
