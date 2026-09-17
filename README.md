@@ -1,6 +1,9 @@
 # Hashcat GUI Installation for Kali Linux
 
 Installation guide for running **Hashcat GUI** on Kali Linux.
+<p align="center">
+  <img src="Hashcat GUI Windows Icon.png" width="180">
+</p>
 
 ## Requirements
 
