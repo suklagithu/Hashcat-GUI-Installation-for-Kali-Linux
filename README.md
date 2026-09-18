@@ -98,7 +98,8 @@ To run a benchmark:
 hashcat -b
 ```
 
-For complete installation guidance:- https://youtu.be/i2G83L_VpTY
+For complete installation guidance:- 👉👉👉
+https://youtu.be/i2G83L_VpTY
 
 ## Supported Hash Modes
 
