@@ -1,4 +1,4 @@
-# Hashcat GUI Installation for Kali Linux
+# Hashcat GUI for Kali Linux
 
 Installation guide for running **Hashcat GUI** on Kali Linux.
 
@@ -87,6 +87,7 @@ The Hashcat GUI should now open.
 ## GPU Verification
 
 To check available Hashcat devices:
+https://youtu.be/i2G83L_VpTY
 
 ```bash
 hashcat -I
@@ -97,6 +98,8 @@ To run a benchmark:
 ```bash
 hashcat -b
 ```
+
+For complete installation guidance:- 
 
 ## Supported Hash Modes
 
