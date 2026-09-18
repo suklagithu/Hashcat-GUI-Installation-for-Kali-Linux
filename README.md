@@ -87,7 +87,6 @@ The Hashcat GUI should now open.
 ## GPU Verification
 
 To check available Hashcat devices:
-https://youtu.be/i2G83L_VpTY
 
 ```bash
 hashcat -I
@@ -99,7 +98,7 @@ To run a benchmark:
 hashcat -b
 ```
 
-For complete installation guidance:- 
+For complete installation guidance:- https://youtu.be/i2G83L_VpTY
 
 ## Supported Hash Modes
 
